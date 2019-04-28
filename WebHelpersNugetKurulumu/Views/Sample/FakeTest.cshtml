@@ -1,0 +1,16 @@
+﻿@model List<string>
+@{
+    ViewBag.Title = "FakeTest";
+}
+
+<h2>FakeTest</h2>
+
+
+<div class="row">
+    @using (Html.BeginForm("Test", "SampleController",FormMethod.Post))
+    {
+        <strong>index : </strong>
+        @Html.TextBox("id", "", new { @class = "form-control" })
+        <button class="btn btn-danger" type="submit">Send</button>
+    }
+</div>
